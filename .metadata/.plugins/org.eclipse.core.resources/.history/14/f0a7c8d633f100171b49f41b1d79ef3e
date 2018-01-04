@@ -1,0 +1,53 @@
+package com.Zilker.sample;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class DateClass {
+
+	private static Scanner sc;
+
+	public static void main(String[] args) throws ParseException {
+		// TODO Auto-generated method stub
+		
+        sc = new Scanner(System.in);
+		
+		String dateString1 = sc.next();
+		String dateString2 = sc.next();
+		
+		SimpleDateFormat  format = new SimpleDateFormat("dd-MMM-yyyy");
+		Date date1 = format.parse(dateString1);
+		Date date2 = format.parse(dateString2);
+		
+		int choice =date1.compareTo(date2);
+		switch (choice)
+		{
+			case -1:
+			{
+				System.out.println("Date 1 is behind date 2");
+			
+				break;
+			}
+			case 0:
+			{
+				System.out.println("Date 1 is equal to date 2");
+			
+				break;
+			}
+			case 1:
+			{
+				System.out.println("Date 1 is ahead of date 2");
+			
+				break;
+			}
+			default:{
+				
+			}
+		}
+		
+		
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.Zilker.sample;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.SimpleTimeZone;
+
+public class DateFormat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		Date date = new Date();
+		
+		
+		SimpleDateFormat format = new SimpleDateFormat("E yyyy.M.dd 'at' H:m:s a z");
+		format.setTimeZone(new SimpleTimeZone(SimpleTimeZone.STANDARD_TIME, "UTC"));
+		
+		System.out.println(format.format(date));
+		
+		
+
+	}
+
+}
