@@ -17,8 +17,8 @@ public class HTMLtag {
 			
 			String htmlTag = sc.nextLine();
 			
-			String tmp = htmlTag.replaceAll("<[/]*([a-z]+)([a-z A-z 0-9 = - ]+)*>", " ");
-//			String tmp = htmlTag.replaceAll("<.*?>", " ");
+//			String tmp = htmlTag.replaceAll("<[/]*([a-z]+)([a-z A-z 0-9 = - ]+)*>", " ");
+			String tmp = htmlTag.replaceAll("<.*?>", " ");
 			
 			logger.log(Level.INFO,tmp);
 

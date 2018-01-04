@@ -14,14 +14,12 @@ public class DateFormat {
 		Date date = new Date();
 
 		try {
-			
 			SimpleDateFormat format = new SimpleDateFormat("E yyyy.M.dd 'at' H:m:s a z");
 			format.setTimeZone(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
 
 			logger.log(Level.INFO, format.format(date));
 
 		} catch (Exception e) {
-			
 			e.printStackTrace();
 		}
 
